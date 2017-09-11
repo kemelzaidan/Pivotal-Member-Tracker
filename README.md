@@ -3,10 +3,9 @@ Pivotal-Member-Tracker
 
 Enter your Pivotal Tracker API Token and get to see which developer is working on which story. You can find the API token on your profile page.
 
-visit us at-- 
+So far, the only difference between the original project by Arpit and this one, is that it stores the Pivotal Tracker API token and project ID to the localStorage, so you don't have to type it every time.
 
-http://TrackDevelopers.com
+thanks Arpit, for the great work.
 
-thanks,
 Arpit
 http://arpit.me

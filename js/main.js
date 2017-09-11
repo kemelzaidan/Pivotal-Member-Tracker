@@ -5,11 +5,27 @@ var story_type_icon = {
 }
 var members_iter=1;
 var total = 1;
+var token, myproject;
+
+$(document).ready(function(){
+  var token = localStorage.token;
+  $("#mytoken").val(token);
+  var myproject = localStorage.myproject;
+  $("#myproject").val(myproject);
+})
+
 function get_data(){
   $("#mytable").html("<tr></tr>");
   $("#mytable").hide();
-  var token = $("#mytoken").val();
-  var myproject = $("#myproject").val();
+  
+  if (!token){
+    token = $("#mytoken").val();
+    localStorage.setItem('token', token);
+  }
+  if (!myproject){
+    myproject = myproject = $("#myproject").val();
+    localStorage.setItem('myproject', myproject);
+  }
   $( "tr" ).sortable({
                         placeholder: "widget_highlight_placeholder",
                         forcePlaceholderSize: true,
